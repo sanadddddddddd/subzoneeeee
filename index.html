@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subzone | بوابة الضمان</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="site-shell">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="assets/subzone-mark.svg" alt="شعار Subzone" class="brand-logo">
+      <div class="brand-copy">
+        <strong class="brand-name">Subzone</strong>
+        <span class="brand-subtitle">بوابة الضمان</span>
+        <small class="brand-tagline">العالم بين يديك</small>
+      </div>
+    </a>
+
+    <nav class="topnav">
+      <a href="portal.html">دخول العميل</a>
+      <a href="admin.html">لوحة الإدارة</a>
+      <a href="card.html">بطاقة الطباعة</a>
+    </nav>
+  </header>
+
+  <main class="hero-grid">
+    <section class="hero-copy glass-panel">
+      <p class="eyebrow">QR ثابت لكل البطاقات</p>
+      <h1>نفس البطاقة لكل عميل، والتحقق يتم برقم الهاتف وكود الضمان.</h1>
+      <p class="hero-text">
+        هذه النسخة الأولية مبنية لفكرة <strong>Subzone</strong>: الزبون يمسح نفس الـ QR الموجود في كل بطاقات الضمان،
+        يدخل رقم الهاتف وكود الضمان، وبعدها تظهر له بياناته المخزنة عندك.
+      </p>
+
+      <div class="hero-actions">
+        <a class="primary-button" href="portal.html">فتح بوابة العميل</a>
+        <a class="secondary-button" href="admin.html">إدارة البيانات</a>
+      </div>
+
+      <button class="scroll-cue" type="button" data-scroll-target=".dashboard-preview">
+        <span class="scroll-cue-mouse"></span>
+        <span>انزل وشوف التفاصيل</span>
+      </button>
+
+      <ul class="feature-list">
+        <li>ربط كل عملية بيع برقم هاتف وكود ضمان فريد.</li>
+        <li>لوحة إدارة محلية لتسجيل العملاء والبيانات الحساسة.</li>
+        <li>صفحة جاهزة للطباعة فيها مكان الـ QR الثابت.</li>
+      </ul>
+    </section>
+
+    <section class="dashboard-preview glass-panel">
+      <div class="preview-card">
+        <span class="status-badge">نشط</span>
+        <h2>تدفق الاستخدام</h2>
+        <ol class="flow-list">
+          <li>تطبع بطاقة ضمان واحدة بتصميم ثابت.</li>
+          <li>العميل يمسح الـ QR ويدخل بيانات التحقق.</li>
+          <li>المنظومة تعرض بياناته فقط إذا تطابق الرقم مع الكود.</li>
+        </ol>
+      </div>
+
+      <div class="preview-card accent">
+        <h3>الرابط المقصود داخل الـ QR</h3>
+        <code class="portal-link">https://your-domain.com/portal.html</code>
+        <p>
+          بعد رفع الملفات على استضافة أو دومين، هذا هو الرابط الذي تضعه داخل الـ QR الثابت في كل البطاقات.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

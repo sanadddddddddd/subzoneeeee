@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subzone | بوابة العميل</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="site-shell inner-page">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="assets/subzone-mark.svg" alt="شعار Subzone" class="brand-logo">
+      <div class="brand-copy">
+        <strong class="brand-name">Subzone</strong>
+        <span class="brand-subtitle">بوابة الضمان</span>
+        <small class="brand-tagline">العالم بين يديك</small>
+      </div>
+    </a>
+
+    <nav class="topnav">
+      <a href="index.html">الرئيسية</a>
+      <a href="admin.html">الإدارة</a>
+      <a href="card.html">الطباعة</a>
+    </nav>
+  </header>
+
+  <main class="page-grid">
+    <section class="glass-panel form-panel">
+      <p class="eyebrow">تحقق سريع وآمن</p>
+      <h1>أدخل رقم الهاتف وكود الضمان</h1>
+      <p class="hero-text">
+        نفس الـ QR يفتح هذه الصفحة عند جميع العملاء، لكن البيانات لا تظهر إلا عند تطابق رقم الهاتف مع كود الضمان المسجل.
+      </p>
+
+      <form id="portal-form" class="stack-form">
+        <label>
+          <span>رقم الهاتف</span>
+          <input id="phone" name="phone" type="tel" placeholder="مثال: 0912345678" required>
+        </label>
+
+        <label>
+          <span>كود الضمان</span>
+          <input id="warrantyCode" name="warrantyCode" type="text" placeholder="مثال: SZ-4821" required>
+        </label>
+
+        <button class="primary-button" type="submit">عرض البيانات</button>
+      </form>
+
+      <p id="portal-feedback" class="helper-text"></p>
+    </section>
+
+    <section class="glass-panel result-panel">
+      <div id="empty-state" class="empty-state">
+        <h2>في انتظار التحقق</h2>
+        <p>بعد إدخال البيانات الصحيحة، ستظهر هنا بيانات الخدمة والضمان الخاصة بالعميل.</p>
+      </div>
+
+      <article id="customer-card" class="customer-card hidden">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">تم التحقق بنجاح</p>
+            <h2 id="customerName">اسم العميل</h2>
+          </div>
+          <span id="recordStatus" class="status-badge">نشط</span>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail-box">
+            <span>الخدمة</span>
+            <strong id="serviceType"></strong>
+          </div>
+          <div class="detail-box">
+            <span>رقم الهاتف</span>
+            <strong id="customerPhone"></strong>
+          </div>
+          <div class="detail-box">
+            <span>كود الضمان</span>
+            <strong id="customerCode"></strong>
+          </div>
+          <div class="detail-box">
+            <span>تاريخ الشراء</span>
+            <strong id="purchaseDate"></strong>
+          </div>
+          <div class="detail-box">
+            <span>انتهاء الضمان</span>
+            <strong id="warrantyUntil"></strong>
+          </div>
+          <div class="detail-box">
+            <span>رقم الحساب</span>
+            <strong id="accountIdentifier"></strong>
+          </div>
+          <div class="detail-box full-width">
+            <span>بيانات الدخول</span>
+            <strong id="accountSecret"></strong>
+          </div>
+          <div class="detail-box full-width">
+            <span>ملاحظات</span>
+            <strong id="recordNotes"></strong>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

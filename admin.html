@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subzone | لوحة الإدارة</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="site-shell inner-page">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="assets/subzone-mark.svg" alt="شعار Subzone" class="brand-logo">
+      <div class="brand-copy">
+        <strong class="brand-name">Subzone</strong>
+        <span class="brand-subtitle">بوابة الضمان</span>
+        <small class="brand-tagline">العالم بين يديك</small>
+      </div>
+    </a>
+
+    <nav class="topnav">
+      <a href="index.html">الرئيسية</a>
+      <a href="portal.html">بوابة العميل</a>
+      <a href="card.html">الطباعة</a>
+    </nav>
+  </header>
+
+  <main class="admin-layout">
+    <section class="glass-panel form-panel">
+      <p class="eyebrow">إضافة وتحديث السجلات</p>
+      <h1>بيانات كل عميل تُسجل مرة واحدة وقت البيع</h1>
+
+      <form id="admin-form" class="stack-form">
+        <input id="recordId" name="recordId" type="hidden">
+
+        <label>
+          <span>اسم العميل</span>
+          <input id="customerNameInput" name="customerName" type="text" placeholder="مثال: محمد سالم" required>
+        </label>
+
+        <label>
+          <span>رقم الهاتف</span>
+          <input id="phoneInput" name="phone" type="tel" placeholder="0912345678" required>
+        </label>
+
+        <div class="inline-field">
+          <label>
+            <span>كود الضمان</span>
+            <input id="warrantyCodeInput" name="warrantyCode" type="text" placeholder="SZ-4821" required>
+          </label>
+          <button id="generateCode" class="secondary-button compact-button" type="button">توليد كود</button>
+        </div>
+
+        <label>
+          <span>نوع الخدمة أو الحساب</span>
+          <input id="serviceInput" name="service" type="text" placeholder="Netflix Premium / PSN / حساب لعبة" required>
+        </label>
+
+        <label>
+          <span>رقم الحساب أو المعرف</span>
+          <input id="accountIdentifierInput" name="accountIdentifier" type="text" placeholder="ACC-2049" required>
+        </label>
+
+        <label>
+          <span>بيانات الدخول</span>
+          <textarea id="accountSecretInput" name="accountSecret" rows="3" placeholder="الإيميل - كلمة المرور - كود إضافي" required></textarea>
+        </label>
+
+        <div class="two-columns">
+          <label>
+            <span>تاريخ الشراء</span>
+            <input id="purchaseDateInput" name="purchaseDate" type="date" required>
+          </label>
+          <label>
+            <span>انتهاء الضمان</span>
+            <input id="warrantyUntilInput" name="warrantyUntil" type="date" required>
+          </label>
+        </div>
+
+        <div class="two-columns">
+          <label>
+            <span>الحالة</span>
+            <select id="statusInput" name="status">
+              <option value="نشط">نشط</option>
+              <option value="مباع">مباع</option>
+              <option value="منتهي">منتهي</option>
+              <option value="معلق">معلق</option>
+            </select>
+          </label>
+          <label>
+            <span>ملاحظات</span>
+            <input id="notesInput" name="notes" type="text" placeholder="أي تفاصيل إضافية">
+          </label>
+        </div>
+
+        <div class="hero-actions">
+          <button class="primary-button" type="submit">حفظ السجل</button>
+          <button id="resetForm" class="secondary-button" type="button">تفريغ النموذج</button>
+        </div>
+      </form>
+
+      <p id="admin-feedback" class="helper-text"></p>
+    </section>
+
+    <section class="glass-panel table-panel">
+      <div class="table-heading">
+        <div>
+          <p class="eyebrow">قاعدة البيانات المحلية</p>
+          <h2>السجلات المحفوظة</h2>
+        </div>
+        <input id="searchRecords" type="search" placeholder="ابحث بالاسم أو الرقم أو الكود">
+      </div>
+
+      <div class="table-wrap">
+        <table class="records-table">
+          <thead>
+            <tr>
+              <th>العميل</th>
+              <th>الهاتف</th>
+              <th>الكود</th>
+              <th>الخدمة</th>
+              <th>الضمان</th>
+              <th>إجراء</th>
+            </tr>
+          </thead>
+          <tbody id="recordsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

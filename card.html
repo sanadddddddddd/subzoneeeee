@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subzone | بطاقة ضمان قابلة للطباعة</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="site-shell inner-page">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="assets/subzone-mark.svg" alt="شعار Subzone" class="brand-logo">
+      <div class="brand-copy">
+        <strong class="brand-name">Subzone</strong>
+        <span class="brand-subtitle">بوابة الضمان</span>
+        <small class="brand-tagline">العالم بين يديك</small>
+      </div>
+    </a>
+
+    <nav class="topnav">
+      <a href="index.html">الرئيسية</a>
+      <a href="portal.html">بوابة العميل</a>
+      <a href="admin.html">الإدارة</a>
+    </nav>
+  </header>
+
+  <main class="print-layout">
+    <section class="glass-panel print-instructions">
+      <p class="eyebrow">نفس البطاقة لكل العملاء</p>
+      <h1>اطبع هذه البطاقة، وضع فيها الـ QR الثابت الخاص بالبوابة.</h1>
+      <ol class="flow-list">
+        <li>ارفع الموقع على استضافة أو دومين.</li>
+        <li>حوّل رابط `portal.html` إلى QR واحد ثابت.</li>
+        <li>اطبع البطاقة نفسها دائمًا واكتب كود الضمان في المكان المخصص وقت البيع.</li>
+      </ol>
+
+      <button class="primary-button" onclick="window.print()">طباعة البطاقة</button>
+    </section>
+
+    <section class="warranty-card">
+      <div class="card-branding">
+        <img src="assets/subzone-mark.svg" alt="شعار Subzone" class="print-logo">
+        <div>
+          <p class="eyebrow">Subzone</p>
+          <h2>بطاقة ضمان رقمية</h2>
+        </div>
+      </div>
+
+      <div class="card-core">
+        <div class="qr-placeholder">
+          <div class="qr-grid"></div>
+          <p>ضع هنا صورة الـ QR الثابت</p>
+        </div>
+
+        <div class="card-copy">
+          <p>امسح الكود ثم أدخل رقم الهاتف وكود الضمان لاستلام البيانات.</p>
+
+          <div class="code-line">
+            <span>كود الضمان</span>
+            <div class="blank-line"></div>
+          </div>
+
+          <div class="code-line">
+            <span>تاريخ البيع</span>
+            <div class="blank-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="card-footer">
+        <span>للدعم: بياناتك تظهر فقط بعد تطابق رقم الهاتف مع كود الضمان.</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
